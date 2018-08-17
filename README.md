@@ -8,11 +8,11 @@ By writing data to multiple cluster configurations, you can season the "new" clu
 
 # Usage
 
-This package adds an additional driver to the cache manager in Laravel. To use, add `jrub\LaravelMemcachedProxyDriver\MemcachedProxyServiceProvider::class` to your `providers' array in `config/app.php`. Then, add your cluster configuration(s) to `config/cache.php` using the `memcached-proxy` driver.
+This package adds an additional driver to the cache manager in Laravel. To use, add `jrub\LaravelMemcachedProxyDriver\MemcachedProxyServiceProvider::class` to your `providers` array in `config/app.php`. Then, add your cluster configuration(s) to `config/cache.php` using the `memcached-proxy` driver.
 
 Here is an example configuration:
 
-** Keep in mind, only 1 cluster can be used to READ data, so that cluster will have a mode of `rw` while all the other clusters will have a mode of `w` only.**
+**Keep in mind, only 1 cluster can be used to READ data, so that cluster will have a mode of `rw` while all the other clusters will have a mode of `w` only.**
 
 **config/cache.php**
 ```
