@@ -1,0 +1,25 @@
+{
+	"name": "jrub/laravel-memcached-proxy-driver",
+	"description": "",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Jim Rubenstein",
+            "email": "git@jimsc.com"
+        }
+	],
+	"autoload": {
+		"psr-4": {
+			"jrub\\LaravelMemcachedProxyDriver": "src"
+		}
+	},
+	"require": {
+		"php": "^7.0",
+		"illuminate/support": ">=5.1"
+	},
+	"extra": {
+		"providers": [
+			"jrub\\LaravelMemcachedProxyDriver\\MemcachedProxyServiceProvider"
+		]
+	}
+}
