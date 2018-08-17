@@ -16,6 +16,7 @@ Here is an example configuration:
 
 **config/cache.php**
 ```
+<?php
 return [
 
     /*
