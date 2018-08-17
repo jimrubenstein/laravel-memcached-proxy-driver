@@ -15,7 +15,7 @@ Here is an example configuration:
 **Keep in mind, only 1 cluster can be used to READ data, so that cluster will have a mode of `rw` while all the other clusters will have a mode of `w` only.**
 
 **config/cache.php**
-```
+```php
 <?php
 return [
 
