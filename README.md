@@ -18,32 +18,32 @@ Here is an example configuration:
 ```
 return [
 
-	/*
-		Other Laravel Configurations
-	*/
+    /*
+        Other Laravel Configurations
+    */
 
-	'memcached-cluster' => [
-		'driver' => 'memcached-proxy',
-		'clusters' => [
-			// Cluster A
-			[
-				'mode' => 'rw',
-				'servers' => [
-					['host' => 'server-a.cluster-1.example.com', 'port' => 11211, 'weight' => 100],
-					['host' => 'server-b.cluster-1.example.com', 'port' => 11211, 'weight' => 100],
-				]
-			],
+    'memcached-cluster' => [
+        'driver' => 'memcached-proxy',
+        'clusters' => [
+            // Cluster A
+            [
+                'mode' => 'rw',
+                'servers' => [
+                    ['host' => 'server-a.cluster-1.example.com', 'port' => 11211, 'weight' => 100],
+                    ['host' => 'server-b.cluster-1.example.com', 'port' => 11211, 'weight' => 100],
+                ]
+            ],
 
-			// Cluster B
-			[
-				'mode' => 'w', // Write only -- can't read from 2 clusters
-				'servers' => [
-					['host' => 'server-a.cluster-2.example.com', 'port' => 11211, 'weight' => 100],
-					['host' => 'server-b.cluster-2.example.com', 'port' => 11211, 'weight' => 100],
-				]
-			],
-		]
-	],
+            // Cluster B
+            [
+                'mode' => 'w', // Write only -- can't read from 2 clusters
+                'servers' => [
+                    ['host' => 'server-a.cluster-2.example.com', 'port' => 11211, 'weight' => 100],
+                    ['host' => 'server-b.cluster-2.example.com', 'port' => 11211, 'weight' => 100],
+                ]
+            ],
+        ]
+    ],
 ];
 ```
 
