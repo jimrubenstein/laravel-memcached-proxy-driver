@@ -3,7 +3,7 @@
 use Illuminate\Session\SessionManager as LaravelSessionManager;
 
 class SessionManager extends LaravelSessionManager {
-	protected function createMemcachedClusterDriver() {
+	protected function createMemcachedProxyDriver() {
 		return $this->createCacheBased('memcached-proxy');
 	}
 }
